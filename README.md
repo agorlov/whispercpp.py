@@ -1,7 +1,7 @@
 Python bindings for whisper.cpp
 ===============================
 
-This fork Ru language by default.
+This fork Russian language by default.
 
 <a href="https://www.buymeacoffee.com/lukeFxC" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
