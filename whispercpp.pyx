@@ -76,7 +76,7 @@ cdef whisper_full_params default_params() nogil:
     cdef whisper_full_params params = whisper_full_default_params(strategy)
 
     params.print_special = False
-    self.params.print_timestamps = False
+    params.print_timestamps = False
     params.print_realtime = False
     params.print_progress = False
     params.translate = False
