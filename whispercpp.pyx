@@ -72,8 +72,8 @@ cdef whisper_full_params default_params() nogil:
     #cdef whisper_full_params params = whisper_full_default_params(
     #    whisper_sampling_strategy.WHISPER_SAMPLING_GREEDY
     #)
-
-    cdef whisper_full_params params = whisper_full_default_params(0)
+    strategy: int = 0
+    cdef whisper_full_params params = whisper_full_default_params(strategy)
 
     params.print_special = False
     self.params.print_timestamps = False
