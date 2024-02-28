@@ -69,11 +69,16 @@ cdef cnp.ndarray[cnp.float32_t, ndim=1, mode="c"] load_audio(bytes file, int sr 
     return frames
 
 cdef whisper_full_params default_params() nogil:
-    cdef whisper_full_params params = whisper_full_default_params(
-        whisper_sampling_strategy.WHISPER_SAMPLING_GREEDY
-    )
-    params.print_realtime = True
-    params.print_progress = True
+    #cdef whisper_full_params params = whisper_full_default_params(
+    #    whisper_sampling_strategy.WHISPER_SAMPLING_GREEDY
+    #)
+
+    cdef whisper_full_params params = whisper_full_default_params(0)
+
+    params.print_special = False
+    self.params.print_timestamps = False
+    params.print_realtime = False
+    params.print_progress = False
     params.translate = False
     params.language = <const char *> LANGUAGE
     n_threads = N_THREADS
